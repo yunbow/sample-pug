@@ -1,0 +1,15 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title Pug Test
+  body
+    p Pug Test
+    - var langList = [{code:"en",name:"English"},{code:"jp",name:"Japanese"},{code:"zh",name:"Chinese"}];
+    - var defaultLang = "jp";
+    each lang in langList
+      if lang.code == defaultLang
+        li language:#{lang.name}(default)
+      else
+        li language:#{lang.name}
+

@@ -1,0 +1,16 @@
+mixin content1
+  P mixin content1
+
+mixin content2(label)
+  P mixin content2 #{label}
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title Pug Test
+  body
+    p Pug Test
+    +content1
+    +content2('arg2')
+
